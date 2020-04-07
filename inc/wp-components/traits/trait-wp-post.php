@@ -113,7 +113,7 @@ trait WP_Post {
 		$post_type = $this->post->post_type ?? '';
 		return $post_type;
 	}
-	
+
 	/**
 	 * Set the `id` config to the post ID.
 	 *
