@@ -29,6 +29,15 @@ trait WP_Post {
 	}
 
 	/**
+	 * Get the post Type.
+	 *
+	 * @return string
+	 */
+	public function get_post_type() {
+		return $this->wp_post_get_type();
+	}
+
+	/**
 	 * Set the post object.
 	 *
 	 * @param mixed $post Post object, post ID, or null to use global $post
@@ -93,6 +102,16 @@ trait WP_Post {
 	public function wp_post_get_id() : int {
 		$post_id = $this->post->ID ?? 0;
 		return absint( $post_id );
+	}
+
+	/**
+	 * Get the post type
+	 *
+	 * @return string
+	 */
+	public function wp_post_get_type() : string {
+		$post_type = $this->post->post_type ?? '';
+		return $post_type;
 	}
 
 	/**

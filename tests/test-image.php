@@ -294,7 +294,7 @@ class Image_Tests extends WP_UnitTestCase {
 		$image_two = ( new \WP_Components\Image() )->configure( $post_two->ID, 'test' );
 
 		$this->assertEquals(
-			'http://example.org/wp-content/uploads/2019/12/test-image.jpg',
+			'http://example.org/wp-content/uploads/2020/04/test-image.jpg',
 			$image_one->get_config( 'src' )
 		);
 		$this->assertEquals(
